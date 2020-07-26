@@ -6,9 +6,38 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= favicon_link_tag 'image.ico.png'%>
   </head>
 
   <body>
-    <%= yield %>
-  </body>
+	  	<div class="main">
+		  	<div class="nav1">
+		  		<ul>
+		  			<li><%= link_to "Thublr",root_path %></li>
+		  			<li><%= link_to "Posts", root_path %></li>
+		  		</ul>
+		  	</div>	
+		  	<div class="nav2">
+		  		<ul>
+		  			<li><a href="#">User Login</a></li>
+					<li><a href="#">Post Feed</a></li>
+		  			<li><a href="">About</a></li>
+		  		</ul>
+
+		  	</div>
+		  		
+			<div class="button">
+				<button><%= link_to "Make Post", new_post_path %></button>
+				<button>Log Out</button>
+			</div>
+			<div class="main">
+			  		
+				<%= yield %>  
+
+			</div>
+			
+		</div>
+
+    
+ 	 </body>
 </html>
